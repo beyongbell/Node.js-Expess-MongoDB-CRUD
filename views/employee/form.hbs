@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-content">
+        <p class="title">
+            <h1>{{ title }}</h1>
+        </p>
+        <br>
+        <form action="/employee" method="POST" autocomplete="off">
+         <input type="hidden" name="_id" value="{{employee._id}}">
+            <div class="field">
+                <label class="label">Full Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Full Name" name="fullname">
+                </div>
+                <p class="help is-danger">{{employee.fullNameError}}</p>
+            </div>
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Email" name="email">
+                </div>
+                <p class="help is-danger">{{employee.emailError}}</p>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Mobile</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Mobile" name="mobile">
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <label class="label">City</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="City" name="city">
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-link" type="submit">Submit</button>
+                    <a class="button is-link" href="/employee/index"><i class="fa fa-list-alt"></i> View All</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
